@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cabinet Pricing Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cabinet Pricing Calculator</h1>
+    <form id="calc-form">
+      <label>Base Cabinet (RM 220/ft)</label>
+      <input type="number" id="baseFt" min="0" placeholder="Enter length (FT)">
+
+      <label>Quartz Stone Top (RM 210/ft)</label>
+      <input type="number" id="quartzFt" min="0" placeholder="Enter length (FT)">
+
+      <label>Top Hung Wall Cabinet - Full Height (RM 250/ft)</label>
+      <input type="number" id="wallFullFt" min="0" placeholder="Enter length (FT)">
+
+      <label>Top Hung Wall Cabinet - Non Full Height (RM 230/ft)</label>
+      <input type="number" id="wallNonFullFt" min="0" placeholder="Enter length (FT)">
+
+      <hr>
+
+      <label>Drawer Set (3 pcs/set) - RM 250</label>
+      <input type="number" id="drawerSet" min="0" placeholder="Quantity">
+
+      <label>Foam Board Sink Carcass - RM 350</label>
+      <input type="number" id="foamSink" min="0" placeholder="Quantity">
+
+      <label>End Panel - RM 150</label>
+      <input type="number" id="endPanel" min="0" placeholder="Quantity">
+
+      <label>Opening Sink & Hob Hole - RM 150</label>
+      <input type="number" id="sinkHole" min="0" placeholder="Quantity">
+
+      <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
