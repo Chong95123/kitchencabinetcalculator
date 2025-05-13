@@ -2,42 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cabinet Pricing Calculator</title>
+  <title>Kimwood Pricing Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Cabinet Pricing Calculator</h1>
-    <form id="calc-form">
-      <label>Base Cabinet (RM 220/ft)</label>
-      <input type="number" id="baseFt" min="0" placeholder="Enter length (FT)">
+  <div class="wrapper">
+    <h2>Pricing Calculator</h2>
+    <p class="note">By Kimwood</p>
 
-      <label>Quartz Stone Top (RM 210/ft)</label>
-      <input type="number" id="quartzFt" min="0" placeholder="Enter length (FT)">
+    <label for="mode">Select Calculator</label>
+    <select id="mode">
+      <option value="kitchen">Kitchen Cabinet-By Kimwood</option>
+      <option value="cement">Cement Table Top- By Ali</option>
+    </select>
 
-      <label>Top Hung Wall Cabinet - Full Height (RM 250/ft)</label>
-      <input type="number" id="wallFullFt" min="0" placeholder="Enter length (FT)">
+    <div id="kitchenFields">
+      <h3>Kitchen Cabinet</h3>
+      <label>Base Cabinet (FT): <input type="number" id="baseFt"></label>
+      <label>Quartz Stone Top (FT): <input type="number" id="quartzFt"></label>
+      <label>Wall Cabinet 10FT (FT): <input type="number" id="wallFullFt"></label>
+      <label>Wall Cabinet Non Full (FT): <input type="number" id="wallNonFullFt"></label>
+      <label>Drawer Set (Qty): <input type="number" id="drawerSet"></label>
+      <label>Sink Carcass (Qty): <input type="number" id="foamSink"></label>
+      <label>End Panel (Qty): <input type="number" id="endPanel"></label>
+      <label>Sink/Hob Hole (Qty): <input type="number" id="sinkHole"></label>
+    </div>
 
-      <label>Top Hung Wall Cabinet - Non Full Height (RM 230/ft)</label>
-      <input type="number" id="wallNonFullFt" min="0" placeholder="Enter length (FT)">
+    <div id="cementFields" style="display:none">
+      <h3>Cement Table Top</h3>
+      <label>Length (FT): <input type="number" id="cementFt"></label>
+      <label>
+        Wall Option:
+        <select id="cementOption">
+          <option value="325">2 Wall - RM 325/ft</option>
+          <option value="280">1 Wall - RM 280/ft</option>
+          <option value="300">No Wall - RM 300/ft</option>
+        </select>
+      </label>
+    </div>
 
-      <hr>
-
-      <label>Drawer Set (3 pcs/set) - RM 250</label>
-      <input type="number" id="drawerSet" min="0" placeholder="Quantity">
-
-      <label>Foam Board Sink Carcass - RM 350</label>
-      <input type="number" id="foamSink" min="0" placeholder="Quantity">
-
-      <label>End Panel - RM 150</label>
-      <input type="number" id="endPanel" min="0" placeholder="Quantity">
-
-      <label>Opening Sink & Hob Hole - RM 150</label>
-      <input type="number" id="sinkHole" min="0" placeholder="Quantity">
-
-      <button type="button" onclick="calculate()">Calculate</button>
-    </form>
-
+    <button onclick="calculate()">Calculate</button>
     <div id="result"></div>
   </div>
 
